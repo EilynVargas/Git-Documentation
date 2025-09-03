@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap');
+</style>
+<link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header>Git Documentation</header>
+        <a class="nav-link" href="#what_is_version_control?">What is version control?</a>
+        <a class="nav-link" href="#what_is_git?">What is Git?</a>
+        <a class="nav-link" href="#basic_git_commands">Basic Git Commands</a>
+        <a class="nav-link" href="#install_and_set_up_git">Install and set up Git</a>
+        <a class="nav-link" href="#resources">Resources</a>
+        <a class="nav-link" href="#references">References</a>
+      </nav>
+<div class="separate-content"></div>
+<div class="content">
+      <section id="what_is_version_control?" class="main-section">
+        <header>What is version control?</header>
+        <p>
+          Version control systems are software that help track changes make in code over time. As a developer edits code, the version control system takes a snapshot of the files. It then saves that snapshot permanently so it can be recalled later if needed.
+        </p>
+        <p>
+          Without version control, developers are tempted to keep multiple copies of code on their computer. This is dangerous because it's easy to change or delete a file in the wrong copy of code, potentially losing work. Version control systems solve this problem by managing all versions of the code, but presenting the team with a single version at a time.
+        </p>
+      </section>
+
+      <section id="what_is_git?" class="main-section">
+        <header>What is Git?</header>
+        <p>
+          Git is a distributed version control system, which means that a local clone of the project is a complete version control repository. These fully functional local repositories make it easy to work offline or remotely. Developers commit their work locally, and then sync their copy of the repository with the copy on the server. This paradigm differs from centralized version control where clients must synchronize code with a server before creating new versions of code.
+      </p>
+      <p>
+Git's flexibility and popularity make it a great choice for any team. Many developers and college graduates already know how to use Git. Git's user community has created resources to train developers and Git's popularity make it easy to get help when needed. Nearly every development environment has Git support and Git command line tools implemented on every major operating system.
+      </p>
+      </section>
+
+      <section id="basic_git_commands" class="main-section">
+        <header>Basic Git Commands</header>
+        <p>
+          Git works by remembering the changes to your files as if it's taking snapshots of your file system.
+        </p>
+
+      <h2>git status</h2>
+        <p>The first and most commonly used Git command is <code>git status</code>. 
+        </p>
+
+        <p>
+          <code>git status</code> displays the state of the working tree. It lets you see which changes are currently being tracked by Git, so you can decide whether you want to ask Git to take another snapshot.
+        </p>
+
+        <h2>git add</h2>
+        <p>
+          <code>git add</code> is the command you use to tell Git to start keeping track of changes in certain files.
+        </p>
+
+        <p>
+          The technical term is staging these changes. You'll use git add to stage changes to prepare for a commit. All changes in files that have been added but not yet committed are stored in the staging area.
+        </p>
+
+        <h2>git commit</h2>
+        <p>
+          After you've staged some changes for commit, you can save your work to a snapshot by invoking the <code>git commit</code> command.
+        </p>
+
+        <p>
+        Commit is both a verb and a noun. It has essentially the same meaning as when you commit to a plan or commit a change to a database. As a verb, committing changes means you put a copy (of the file, directory, or other "stuff") in the repository as a new version. As a noun, a commit is the small chunk of data that gives the changes you committed a unique identity. The data that's saved in a commit includes the author's name and e-mail address, the date, comments about what you did (and why), an optional digital signature, and the unique identifier of the preceding commit.
+        </p>
+
+        <h2>git log</h2>
+        <p>
+          The <code>git log</code> command allows you to see information about previous commits. Each commit has a message attached to it (a commit message), and the <code>git log</code> command prints information about the most recent commits, like their time stamp, the author, and a commit message. This command helps you keep track of what you've been doing and what changes have been saved.
+        </p>
+
+        <h2>git help</h2>
+        <p>
+          Use this command to easily get information about all the commands you've learned so far, and more.
+        </p>
+        <p>      
+        Remember, each command comes with its own help page, too. You can find these help pages by typing <code> git &lt;command&gt; --help</code>. For example, <code>git commit --help</code> brings up a page that tells you more about the git commit command and how to use it.
+        </p>
+      </section>
+
+      <section id="install_and_set_up_git" class="main-section">
+        <header>Install and set up Git</header>
+        <p>
+          The following sections describe how to install and maintain Git for the three major platforms.
+        </p>
+        
+        <h2>Install Git for Windows</h2>
+        <p>
+          Download and install Git for Windows. Once installed, Git is available from the command prompt or PowerShell. It's recommended that you select the defaults during installation unless there's good reason to change them.
+      </p>
+      <p>
+        Git for Windows doesn't automatically update. To update Git for Windows, download the new version of the installer, which updates Git for Windows in place and retains all settings.
+      </p>
+
+      <h2>Install Git for macOS</h2>
+      <p>
+        macOS 10.9 (Mavericks) and higher installs Git the first time you attempt to run it from the Terminal. While this method is an easy way to get Git on a system, it doesn't allow for control over how often updates or security fixes are applied.
+      </p>
+
+      <p>
+        Instead, it's recommended that you install Git through Homebrew and that you use Homebrew tools to keep Git up to date. Homebrew is a great way to install and manage open source development tools on a Mac from the command line.
+      </p>
+      <p>
+      Install Homebrew and run the following to install the latest version of Git on a Mac:
+      <p>
+      <code> > brew install git </code>
+
+      <p>
+        To update the Git install, use Homebrew's upgrade option:
+      </p>
+      <code> > brew upgrade git </code>
+
+<h2>Install Git for Linux</h2>
+<p>
+Use the Linux distribution's native package management system to install and update Git. For example, on Ubuntu:
+</p>
+<code> > sudo apt-get install git</code>
+      </section>
+
+      <section id="resources" class="main-section">
+        <header>Resources</header>
+        <p>If you'd like to dig deeper, check this <span class="italic-text"> Introduction to Git</span> recap video with Dr. G.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9uGS1ak_FGg?si=22z0L9k6YuY-Cjht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <p>Here are more resources:</p>
+        <ul>
+          <li>
+            Visit the <a href="https://git-scm.com/docs/everyday" target="_blank">Everyday Git</a> site or use the <code>git help everyday</code> command.
+          </li>
+          <li>
+            Review <a href="https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources" target="_blank">Git and GitHub learning resources</a>.
+          </li>
+          <li>
+            Check out the <a href="https://git-scm.com/doc" target="_blank">documentation section</a> of Git's official website.
+          </li>
+        </ul>
+      </section>
+
+      <section id="references" class="main-section">
+        <header>References</header>
+        <p>The content presented in this documentation site was retrieved from:</p>
+        <ul>
+          <li>Microsoft learn: <a href="https://learn.microsoft.com/en-us/devops/develop/git/what-is-version-control" target="_blank">Learn Git</a>.</li>
+          <li>GitHub Foundations Learning Path Part 1: <a href="https://learn.microsoft.com/en-us/training/modules/intro-to-git/" target="_blank">Introduction to Git</a>.</li>
+        </ul>
+      </section>
+      </div>
+    </main>
+  </body>
+  </html>

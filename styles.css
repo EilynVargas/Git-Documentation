@@ -1,0 +1,119 @@
+*{
+  scroll-behavior: smooth;
+}
+html{
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body{
+  font-family: "Host Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#main-doc{
+  display: flex;
+}
+
+nav header{
+  padding: 20px 0;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px 0 60px;
+  width: 30%;
+  top: 70px;
+  position: sticky;
+  height: 1000px;
+  overflow-y: auto;
+}
+
+nav a{
+  text-decoration: none;
+  color: #a7abb1;
+  padding: 15px;
+  border-left: 2px solid #4632fc67;
+}
+
+.content{
+  margin: 60px;
+  width: 70%;
+  max-width: 900px;
+}
+
+section header, nav header{
+  font-size: 32px;
+  font-weight: 600;
+}
+
+section{
+  margin-bottom: 40px;
+}
+
+span.italic-text{
+  font-style: italic;
+}
+
+code{
+  background-color: #c8ccd1;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+li a:visited{
+  color: #4532fc;
+}
+
+li a:hover{
+  color: #b418fc;
+}
+
+nav a:hover, nav a:focus{
+  color: black;
+  border-left: 2px solid #4532fc;
+}
+
+@media (max-width: 1055px){
+  #main-doc{
+    flex-direction: column;
+  }
+
+  nav header{
+    text-align: center;
+  }
+
+  nav{
+    position: static;
+    width: 100%;
+    height: 90vh;
+    overflow-y: hidden;
+    justify-content: center;
+  }
+
+  nav a{
+    color: black;
+    border-left: none;
+    border-bottom: 2px solid #4532fc;
+  }
+
+  .separate-content{
+    width: 100%;
+    height: 1px; 
+    background-color: #b8babe; 
+  }
+
+  .content{
+    margin: 40px;
+  }
+
+  nav a:hover{
+    border-left: none;
+  }
+}
